@@ -1,0 +1,42 @@
+{
+    "name": "juggernautsei/oe-google-connect",
+    "description": "Integrate Google Connection(s) into OpenEMR",
+    "type": "openemr-module",
+    "license": "",
+    "authors": [
+        {
+            "name": "Sherwin Gaddis",
+            "email": "sherwingaddis@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": ["openemr", "openemr-module"],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Juggernaut\\Module\\": "src/"
+        }
+    },
+    "require": {
+        "openemr/oe-module-installer-plugin": "^0.1.0",
+        "php": ">= 7.4",
+        "symfony/event-dispatcher": "^4.4.0",
+        "nyholm/psr7": "^1.4",
+        "google/apiclient": "^2.12.1",
+        "league/oauth2-google": "^4.0"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Drive",
+            "Calendar"
+        ]
+    },
+    "conflict": {
+        "openemr/openemr": "<6.0.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "openemr/oe-module-installer-plugin": true
+        }
+    }
+}
