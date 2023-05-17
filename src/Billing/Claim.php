@@ -126,7 +126,7 @@ class Claim
                 $row['provider'] = sqlQuery($sql, array($row['provider_id']));
                 // Get insurance numbers for this row's provider.
                 $sql = "SELECT * FROM insurance_numbers " .
-                "WHERE (insurance_company_id = ? OR insurance_company_id is NULL) AND provider_id = ?" .
+                "WHERE (insurance_company_id = ? OR insurance_company_id is NULL) AND provider_id = ? " .
                 "ORDER BY insurance_company_id DESC LIMIT 1";
                 $row['insurance_numbers'] = sqlQuery($sql, array($row['payer_id'], $row['provider_id']));
             }
@@ -226,7 +226,7 @@ class Claim
         //
         $this->payers = array();
         $this->payers[0] = array();
-        $query = "SELECT * FROM insurance_data WHERE pid = ? AND 
+        $query = "SELECT * FROM insurance_data WHERE pid = ? AND
             (date <= ? OR date IS NULL) ORDER BY type ASC, date DESC";
         $dres = sqlStatement($query, array($this->pid, $encounter_date));
         $prevtype = '';
