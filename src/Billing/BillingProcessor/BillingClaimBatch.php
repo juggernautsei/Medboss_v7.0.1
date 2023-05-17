@@ -44,7 +44,7 @@ class BillingClaimBatch
      */
     protected $claims = [];
 
-    public function __construct($ext = '.txt')
+    public function __construct($ext = '.clp')
     {
         $this->bat_type = ''; // will be edi or hcfa
         $this->bat_sendid = '';
