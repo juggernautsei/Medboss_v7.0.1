@@ -10,6 +10,7 @@
 
 namespace Juggernaut\Modules;
 
+require_once dirname(__DIR__) . '/oe-telehealth-8x8-jitsi/vendor/autoload.php';
 /**
  * @global EventDispatcher $eventDispatcher Injected by the OpenEMR module loader;
  */
