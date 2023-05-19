@@ -14,4 +14,8 @@ class Bootstrap
     public function __construct(EventDispatcherInterface $eventDispatcher, mixed $kernel)
     {
     }
+
+    public function subscribeToEvents()
+    {
+    }
 }
