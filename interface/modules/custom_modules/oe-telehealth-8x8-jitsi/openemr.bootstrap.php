@@ -10,9 +10,11 @@
 
 namespace Juggernaut\Modules;
 
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+
 require_once dirname(__DIR__) . '/oe-telehealth-8x8-jitsi/vendor/autoload.php';
 /**
- * @global EventDispatcher $eventDispatcher Injected by the OpenEMR module loader;
+ * @global EventDispatcherInterface $eventDispatcher Injected by the OpenEMR module loader;
  */
 
 $bootstrap = new Bootstrap($eventDispatcher, $GLOBALS['kernel']);
