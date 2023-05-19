@@ -1,1 +1,1 @@
-8x8 Jitsi Telehealth Module v0.1.0
+8x8 Jitsi Telehealth Module v0.2.1
